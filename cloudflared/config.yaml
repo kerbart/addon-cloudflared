@@ -1,12 +1,15 @@
 ---
-name: Cloudflared
-version: dev
-slug: cloudflared
-description: "Use a Cloudflare Tunnel to remotely connect to Home Assistant without opening any ports"
-url: "https://github.com/brenner-tobias/addon-cloudflared/"
+name: "Cloudflared"
+version: "1.0.0"
+slug: "cloudflared"
+description: "Expose your Home Assistant instance to the internet using Cloudflare Tunnel"
+url: "https://github.com/kerbart/addon-cloudflared"
 codenotary: dev@brenner.tech
 init: false
 stage: stable
+startup: services
+boot: auto
+homeassistant: "2023.1.0"
 hassio_api: true
 hassio_role: homeassistant
 arch:
