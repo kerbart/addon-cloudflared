@@ -18,6 +18,12 @@ if bashio::config.true 'post_quantum' ; then
     options+=(--post-quantum)
 fi
 
+# Check for http_host_header option
+if bashio::config.has_value 'http_host_header' ; then
+    bashio::log.trace "bashio::config.has_value 'http_host_header'"
+    options+=(--http-host-header="$(bashio::config 'http_host_header')")
+fi
+
 # Check for additional run parameters
 if bashio::config.has_value 'run_parameters' ; then
     bashio::log.trace "bashio::config.has_value 'run_parameters'"
